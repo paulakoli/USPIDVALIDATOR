@@ -17,6 +17,7 @@
     </style>
 
     <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/jquery.modal.min.css" />
 </head>
 
 <body onload="checkConnection();">
@@ -27,6 +28,7 @@
     <!-- "Phantom" cordova.js required for projects that use plugins -->
     <script src="cordova.js"></script>
     <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery.modal.min.js"></script>
     <script src="js/app.js"></script>
     <script src="js/init-app.js"></script>
     <script src="xdk/init-dev.js"></script>
@@ -34,6 +36,13 @@
 
     <h1 style="color: #004251;">USP Student ID Validity Checker</h1>
 
+    <script type="text/javascript">
+    //<![CDATA[
+    //var message = checkConnection2();
+    //alert('g');
+    //]]>
+    </script>
+    
     <p class="align-center">
         <button type="button" id="id_btnScan" onclick="scan();">Scan Student ID</button><br/>
         <strong>-OR-</strong><br/>

@@ -45,7 +45,7 @@
     <preference name="android-targetSdkVersion" value="21"/>
     <preference name="android-installLocation" value="auto"/>
     <preference name="Fullscreen" value="true"/>
-    <preference name="Orientation" value="portrait"/>
+    <preference name="Orientation" value="default"/>
     <preference name="android-signed" value="true"/>
     <preference name="AndroidLaunchMode" value="singleTop"/>
 </platform>

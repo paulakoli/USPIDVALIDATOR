@@ -122,7 +122,12 @@ function scan() {
                 },
                 function (error) {
                     alert("Scanning failed: " + error);
-                }
+                },
+                {
+                  
+                  showFlipCameraButton : true, // iOS and Android
+                  showTorchButton : true, // iOS and Android
+              }
             );
         }
     } catch (e) {

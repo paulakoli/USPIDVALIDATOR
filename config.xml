@@ -51,10 +51,10 @@
 </platform>
 <splash platform="android" src="package-assets/background.9.png" density="mdpi" width="320" height="470" orientation="portrait"/>
 <splash platform="android" src="package-assets/background.12.png" density="hdpi" width="480" height="640" orientation="portrait"/>
-<icon platform="android" src="package-assets/ic_launcher.png" density="mdpi" width="48" height="48"/>
-<icon platform="android" src="package-assets/ic_launcher2.png" density="hdpi" width="72" height="72"/>
-<icon platform="android" src="package-assets/ic_launcher3.png" density="xhdpi" width="96" height="96"/>
-<icon platform="android" src="package-assets/ic_launchers.png" density="ldpi" width="36" height="36"/>
+<icon platform="android" src="package-assets/launcher.png" density="mdpi" width="48" height="48"/>
+<icon platform="android" src="package-assets/launcher2.png" density="hdpi" width="72" height="72"/>
+<icon platform="android" src="package-assets/launcher3.png" density="xhdpi" width="96" height="96"/>
+<icon platform="android" src="package-assets/launchers.png" density="ldpi" width="36" height="36"/>
 <config-file platform="android" parent="/manifest/application" mode="merge"> 
     <activity android:launchMode="singleTop" />
 </config-file>

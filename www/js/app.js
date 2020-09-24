@@ -51,10 +51,10 @@ function searchid() {
     var ustudentid = studentid.toUpperCase();
     var regexp = "^[S][0-9]{8}$";
     if( ustudentid && ustudentid.match(regexp) ) {
-        //document.getElementById("content").innerHTML='<object type="text/html" data="https://sols1.usp.ac.fj/oreg/validateid.pl?id='+ustudentid+'&pid='+device.uuid+'" style="width: 90%; width: 90vw; height:90vh;"></object>';
-        $('<object type="text/html" data="https://sols1.usp.ac.fj/oreg/validateid.pl?id='+ustudentid+'&pid='+device.uuid+'" ></object>').modal({showClose: true});
+        //document.getElementById("content").innerHTML='<object type="text/html" data="https://studentsols.usp.ac.fj/oreg/validateid.pl?id='+ustudentid+'&pid='+device.uuid+'" style="width: 90%; width: 90vw; height:90vh;"></object>';
+        $('<object type="text/html" data="https://studentsols.usp.ac.fj/oreg/validateid.pl?id='+ustudentid+'&pid='+device.uuid+'" ></object>').modal({showClose: true});
         searchlogins(ustudentid);
-        //console.log('<object type="text/html" data="https://sols1.usp.ac.fj/oreg/validateid.pl?id='+ustudentid+'&pid='+device.uuid+'" style="width: 90%; width: 90vw; height:90vh;"></object>');
+        //console.log('<object type="text/html" data="https://studentsols.usp.ac.fj/oreg/validateid.pl?id='+ustudentid+'&pid='+device.uuid+'" style="width: 90%; width: 90vw; height:90vh;"></object>');
     }else{
         alert('Please Enter Correct Student ID');
     }
@@ -64,7 +64,7 @@ function searchlogins(sid) {
     
     var deviceID = device.uuid;
     
-    $.getJSON("https://sols1.usp.ac.fj/oreg/insertshistory.pl?id="+sid+"&uuid="+deviceID, function(data){
+    $.getJSON("https://studentsols.usp.ac.fj/oreg/insertshistory.pl?id="+sid+"&uuid="+deviceID, function(data){
         console.log( data.a );
     });
     
@@ -78,11 +78,11 @@ function checkConnection() {
         clientip = e.ip;
         
         var id_device = device.uuid;
-        if(clientip.substring(0,7) != '144.120'){
+   /**     if(clientip.substring(0,7) != '144.120'){
             document.write("This app is not allowed on current network!!<br/><br/IP Address: "+clientip);
-        }
+        }**/
         
-        $.getJSON("https://sols1.usp.ac.fj/oreg/getphonedetl.pl?id="+id_device, function(data){
+        $.getJSON("https://studentsols.usp.ac.fj/oreg/getphonedetl.pl?id="+id_device, function(data){
             if(data[0].phactive == '0'){
                 document.write("Your phone is not authorised to access this app!!<br/><br/>Device ID: "+id_device);
             }
@@ -93,7 +93,7 @@ function checkConnection() {
     
     /**var deviceID = device.uuid;
     alert(deviceID);
-    $.getJSON("https://sols1.usp.ac.fj/oreg/getphonedetl.pl?id="+deviceID, function(data){
+    $.getJSON("https://studentsols.usp.ac.fj/oreg/getphonedetl.pl?id="+deviceID, function(data){
         if(data[0].phactive == '0'){
             document.write("Your phone is not authorised to access this app!!<br/><br/>Device ID: "+deviceID);
         }
@@ -117,8 +117,8 @@ function scan() {
                     var ustudentid = studentid.toUpperCase();
                     console.log(fName, "Scanned result found!");
                     searchlogins(result.text);
-                    //document.getElementById("content").innerHTML='<object type="text/html" data="https://sols1.usp.ac.fj/oreg/validateid.pl?id='+ustudentid+'&pid='+device.uuid+'" style="width: 90%; width: 90vw; height:90vh;"></object>';
-                    $('<object type="text/html" data="https://sols1.usp.ac.fj/oreg/validateid.pl?id='+ustudentid+'&pid='+device.uuid+'" ></object>').modal({showClose: true});
+                    //document.getElementById("content").innerHTML='<object type="text/html" data="https://studentsols.usp.ac.fj/oreg/validateid.pl?id='+ustudentid+'&pid='+device.uuid+'" style="width: 90%; width: 90vw; height:90vh;"></object>';
+                    $('<object type="text/html" data="https://studentsols.usp.ac.fj/oreg/validateid.pl?id='+ustudentid+'&pid='+device.uuid+'" ></object>').modal({showClose: true});
                 },
                 function (error) {
                     alert("Scanning failed: " + error);
@@ -152,7 +152,7 @@ function scan() {
             //document.write("This app is not allowed on current network!!<br/><br/IP Address: "+clientip);
         }
         
-        $.getJSON("https://sols1.usp.ac.fj/oreg/getphonedetl.pl?id="+id_device2, function(data){
+        $.getJSON("https://studentsols.usp.ac.fj/oreg/getphonedetl.pl?id="+id_device2, function(data){
             if(data[0].phactive == '0'){
                 mtext += "Your phone is not authorised to access this app!!<br/><br/>Device ID: "+id_device2;
                 //document.write("Your phone is not authorised to access this app!!<br/><br/>Device ID: "+id_device);
